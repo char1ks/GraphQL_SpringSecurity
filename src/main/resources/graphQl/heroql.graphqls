@@ -1,0 +1,15 @@
+type hero{
+    id:ID!,
+    username:String,
+    age:String,
+    password:String
+}
+
+type Query{
+    allHero(count:Int):[hero]
+    concreteHero(id:ID):hero
+    loginHero(username:String!,password:String!):hero
+}
+type Mutation{
+    createHero(username:String!,age:String!,password:String!):hero
+}
